@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.dtsb-cont{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.dtsb-cont h2{
+    font-family: sans-serif;
+    font-size: 30px;
+    position: relative;
+    bottom: 50px;
+}
+
+.dtsb-button-div{
+    width: 300px;
+    height: 106.05px;
+    overflow: hidden;
+    position: relative;
+}
+
+.truck-div{
+    position: absolute;
+    overflow: hidden;
+    height: auto;
+    width: 150px;
+    bottom: 0px;
+    left: 40px;
+}
+
+.truck-img{
+    width: 100px;
+    position: relative;
+    left: 10px;
+}
+
+.box-img{
+    height: 20px;
+    position: relative;
+}
+
+.dtsb-button{
+    width: 100%;
+    height: 55px;
+    border: 3px solid rgb(0, 136, 255);
+    background-color: rgb(47, 158, 255);
+    border-radius: 5px;
+    font-size: 25px;
+    color:rgb(255, 255, 255);
+    position: absolute;
+    top: 51px;
+    overflow: hidden;
+    transform-origin: top;
+    transition: all .5s ease;
+}
+
+.dtsb-button:hover{
+    cursor: pointer;
+}
+
+.send1{
+    bottom: 52px;
+    animation: .5s send1 ease;
+}
+
+.send2{
+    animation: 10s send2 ease;
+}
+
+.send3{
+    left: 100%;
+    animation: 3s send3 ease;
+}
+
+.button-height{
+    height: 6px
+}
+
+.button-border-color{
+    animation: .5s button-border ease;
+    border: 3px solid black;
+}
+
+@keyframes button-border{
+    from{
+        border: 3px solid rgb(0, 136, 255);
+    }
+    to{
+        border: 3px solid black;
+    }
+}
+
+@keyframes send1 {
+    from{
+        bottom: 0;
+    }
+    to{
+        bottom: 52px;
+    }
+}
+
+@keyframes send2{
+    0%{
+        bottom: 0;
+    }
+    5%{
+        bottom: 15px;
+        left: 0;
+    }
+    10%{
+        bottom: 15px;
+        left: 50px;
+    }
+}
+
+@keyframes send3{
+    from{
+        left: 40px;
+    }
+    to{
+        left: 120%;
+    }
+}
