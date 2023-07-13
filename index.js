@@ -5,3 +5,7 @@ $("#ccf").on("click", () => {
 $("#dtsb").on("click", () => {
     window.location.assign("./delivery-truck-send-button/dtsb.html")
 })
+
+$("#clf").on("click", () => {
+    window.location.assign("./colorful-login-form/clf.html")
+})
