@@ -11,5 +11,5 @@ $("#clf").on("click", () => {
 })
 
 $("#check").on("click", () => {
-    window.location.assign("./checker-animation/check.html")
+    window.location.assign("./checker-animation/checks.html")
 })
