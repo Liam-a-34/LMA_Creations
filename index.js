@@ -9,3 +9,7 @@ $("#dtsb").on("click", () => {
 $("#clf").on("click", () => {
     window.location.assign("./colorful-login-form/clf.html")
 })
+
+$("#check").on("click", () => {
+    window.location.assign("./checker-animation/check.html")
+})
