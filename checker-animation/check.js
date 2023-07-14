@@ -1,50 +1,41 @@
-let blackCount = 2;
-let whiteCount = 22;
+let blackCount = 1;
+let whiteCount = 1;
+const blackItemCount = 40; // Adjust this based on the actual number of black items
+const whiteItemCount = 40; // Adjust this based on the actual number of white items
 
-function blackSpin() {
-  $("#black1").toggleClass("rotate-left");
-  setTimeout(() => {
-    $("#black1").toggleClass("rotate-left");
-  }, 1000);
+function resetAndRestart() {
+  blackCount = 1;
+  whiteCount = 1;
+  spinElements();
+}
 
+function spinElements() {
   let intervalId = setInterval(() => {
     $(`#black${blackCount}`).addClass("rotate-left");
-    console.log(`Black Count: ${blackCount}`)
+    $(`#white${whiteCount}`).addClass("rotate-right");
 
     setTimeout(() => {
       $(`#black${blackCount}`).removeClass("rotate-left");
-    }, 1000);
-
-    blackCount++; // Increment blackCount
-
-    if (blackCount > 39) {
-      console.log("Stopping the interval");
-      clearInterval(intervalId);
-      blackCount = 2;
-      blackSpin(); // Stop the interval once all elements have been animated
-    }
-  }, 200);
-}
-
-function whiteSpin() {
-  let intervalId2 = setInterval(() => {
-    $(`#white${whiteCount}`).addClass("rotate-right");
-    console.log(`White Count: ${whiteCount}`)
-
-    setTimeout(() => {
       $(`#white${whiteCount}`).removeClass("rotate-right");
     }, 1000);
 
+    blackCount++; // Increment blackCount
     whiteCount++; // Increment whiteCount
 
-    if (whiteCount > 40) {
-      console.log("Stopping the interval");
-      clearInterval(intervalId2);
-      whiteCount = 2;
-      whiteSpin(); // Stop the interval once all elements have been animated
+    // Wrap around to the beginning if the end of the row is reached
+    if (blackCount > blackItemCount) {
+      blackCount = 1;
     }
-  }, 200);
+    if (whiteCount > whiteItemCount) {
+      whiteCount = 1;
+    }
+
+    if (blackCount > 40 && whiteCount > 40) {
+      console.log("Stopping the interval");
+      clearInterval(intervalId);
+      setTimeout(resetAndRestart, 1000); // Delay restart to avoid overlapping intervals
+    }
+  }, 100);
 }
 
-blackSpin();
-whiteSpin();
+spinElements();

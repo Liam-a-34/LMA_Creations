@@ -20,14 +20,16 @@
     height: 800px;
     overflow: hidden;
     position: relative;
-    background-color: rgb(145, 145, 145);
+    background-color: transparent;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    border-radius: 20px;
 }
 
 .black-check{
     width: 150px;
     height: 150px;
     position: absolute;
-    z-index: 3;
+    z-index: 20;
 
 }
 
@@ -35,7 +37,22 @@
     width: 150px;
     height: 150px;
     position: absolute;
+    z-index: 20;
 
+}
+
+.bg-black{
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    z-index: 10
+}
+
+.bg-white{
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    z-index: 10
 }
 
 .black-vert-check{
@@ -46,7 +63,7 @@
     transform-origin: center;
     width: 50px;
     height: 150px;
-    background-color: black;
+    background-color: rgb(15, 15, 15);
 }
 
 .black-horz-check{
@@ -57,7 +74,7 @@
     transform-origin: center;
     width: 150px;
     height: 50px;
-    background-color: black;
+    background-color: rgb(15, 15, 15);
 }
 
 .white-vert-check{
@@ -83,27 +100,32 @@
 }
 
 .rotate-right{
-    animation: .5s rotate-right linear
+    animation: .8s rotate-right linear
 }
 
 .rotate-left{
-    animation: .5s rotate-left linear
+    
+    animation: .8s rotate-left linear
 }
 
 @keyframes rotate-right{
     from{
+        z-index: 50;
         rotate: 0deg;
     }
     to{
+        z-index: 50;
         rotate:90deg
     }
 }
 
 @keyframes rotate-left{
     from{
+        z-index: 50;
         rotate: 0deg;
     }
     to{
+        z-index: 50;
         rotate:-90deg
     }
 }
