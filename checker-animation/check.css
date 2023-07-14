@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.check-cont{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(228, 228, 228);
+}
+
+.check-div{
+    width: 1000px;
+    height: 800px;
+    overflow: hidden;
+    position: relative;
+    background-color: rgb(145, 145, 145);
+}
+
+.black-check{
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    z-index: 3;
+
+}
+
+.white-check{
+    width: 150px;
+    height: 150px;
+    position: absolute;
+
+}
+
+.black-vert-check{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transform-origin: center;
+    width: 50px;
+    height: 150px;
+    background-color: black;
+}
+
+.black-horz-check{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transform-origin: center;
+    width: 150px;
+    height: 50px;
+    background-color: black;
+}
+
+.white-vert-check{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transform-origin: center;
+    width: 50px;
+    height: 150px;
+    background-color: rgb(255, 255, 255);
+}
+
+.white-horz-check{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transform-origin: center;
+    width: 150px;
+    height: 50px;
+    background-color: rgb(255, 255, 255);
+}
+
+.rotate-right{
+    animation: .5s rotate-right linear
+}
+
+.rotate-left{
+    animation: .5s rotate-left linear
+}
+
+@keyframes rotate-right{
+    from{
+        rotate: 0deg;
+    }
+    to{
+        rotate:90deg
+    }
+}
+
+@keyframes rotate-left{
+    from{
+        rotate: 0deg;
+    }
+    to{
+        rotate:-90deg
+    }
+}
