@@ -10,6 +10,6 @@ $("#clf").on("click", () => {
     window.location.assign("./colorful-login-form/clf.html")
 })
 
-$("#check").on("click", () => {
+$("#checks").on("click", () => {
     window.location.assign("./checker-animation/checks.html")
 })
