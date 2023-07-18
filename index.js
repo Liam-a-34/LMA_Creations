@@ -17,3 +17,7 @@ $("#checks").on("click", () => {
 $("#cards").on("click", () => {
     window.location.assign("./playing-cards/pca.html")
 })
+
+$("#gel").on("click", () => {
+    window.location.assign("./gel-inputs/gel.html")
+})
