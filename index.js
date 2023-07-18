@@ -13,3 +13,7 @@ $("#clf").on("click", () => {
 $("#checks").on("click", () => {
     window.location.assign("./checker-animation/checks.html")
 })
+
+$("#cards").on("click", () => {
+    window.location.assign("./playing-cards/pca.html")
+})
