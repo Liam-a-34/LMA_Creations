@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cards-cont{
+    width: 500px;
+    height: 275px;
+    position: relative;
+}
+
+.card{
+    position: absolute;
+    width: 200px;
+    height: 275px;
+    background-color: rgb(44, 44, 44);
+    border-radius: 20px;
+    top: 0;
+    box-shadow: rgba(255, 255, 255, 0.776) 0px 2px 4px;
+    transition: all .5s ease;
+}
+
+#card1{
+    left: 0;
+}
+
+#card2{
+    z-index: 50;
+    left: 100px
+}
+
+#card3{
+    z-index: 100;
+    left: 200px
+}
+
+#card4{
+    z-index: 150;
+    left: 300px
+}
+
+#card1:hover,
+#card2:hover,
+#card3:hover,
+#card4:hover{
+    /* top: -75px; */
+    cursor: pointer;
+}
+
+.move{
+    margin-left: 120px
+}
+
+.selected{
+    scale: 1.1;
+}
+
