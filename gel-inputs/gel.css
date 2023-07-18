@@ -1,0 +1,242 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+main{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #212121;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.inputs-cont{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-family: sans-serif;
+    position: relative;
+    align-items: center;
+}
+
+
+.gel-label {
+  font-size: 15px;
+  padding-left: 10px;
+  position: absolute;
+  left: 10px;
+  top: 13px;
+  transition: 0.3s;
+  pointer-events: none;
+  color: white
+}
+
+.gel-input {
+  width: 200px;
+  height: 45px;
+  border: none;
+  outline: none;
+  padding: 0px 7px;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 15px;
+  background-color: transparent;
+  box-shadow: 3px 3px 10px rgba(0,0,0,1),
+  -1px -1px 6px rgba(255, 255, 255, 0.4);
+}
+
+.gel-input:focus {
+  border: 2px solid transparent;
+  color: #fff;
+  box-shadow: 3px 3px 10px rgba(0,0,0,1),
+  -1px -1px 6px rgba(255, 255, 255, 0.4),
+  inset 3px 3px 10px rgba(0,0,0,1),
+  inset -1px -1px 6px rgba(255, 255, 255, 0.4);
+}
+
+.inputs-cont .gel-input:valid ~ .gel-label,
+.inputs-cont .gel-input:focus ~ .gel-label {
+  transition: 0.3s;
+  padding-left: 2px;
+  transform: translateY(-35px);
+}
+
+.inputs-cont .gel-input:valid,
+.inputs-cont .gel-input:focus {
+  box-shadow: 3px 3px 10px rgba(0,0,0,1),
+  -1px -1px 6px rgba(255, 255, 255, 0.4),
+  inset 3px 3px 10px rgba(0,0,0,1),
+  inset -1px -1px 6px rgba(255, 255, 255, 0.4);
+}
+
+/* ------------------------------------------------------------- */
+
+.switch-btn{
+    display: flex;
+    align-items: center;
+    margin: 50px auto;
+    height: 55px;
+}
+
+.switch-btn .outer-switch{
+    height: 100%;
+    background-color: #212121;
+    width: 115px;
+    border-radius: 150px;
+    box-shadow: 3px 3px 10px rgba(0,0,0,1),
+  -1px -1px 6px rgba(255, 255, 255, 0.4),
+  inset 3px 3px 10px rgba(0,0,0,1),
+  inset -1px -1px 6px rgba(255, 255, 255, 0.4);
+  box-sizing: border-box;
+  cursor: pointer;
+  padding: 6px;
+}
+
+.switch-btn .outer-switch input[type="checkbox"]{
+    opacity: 0;
+    appearance: none;
+    position: absolute;
+}
+
+.switch-btn .outer-switch .button-toggle{
+    height: 42px;
+    width: 42px;
+    background: linear-gradient(#2f2f2f, #111111);
+    border-radius: 100%;
+    position: relative;
+    z-index: 2;
+    transition: left 0.3s ease-in;
+    left: 0 
+}
+
+.switch-btn
+    .outer-switch
+    input[type="checkbox"]:checked
+    + .button
+    .button-toggle{
+    left: 58%;
+}
+
+.switch-btn
+    .outer-switch
+    input[type="checkbox"]:checked
+    + .button
+    .button-indicator{
+    animation: indicator 1s forwards;
+}
+
+.switch-btn .outer-switch .button{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+}
+
+.switch-btn .outer-switch .button-indicator{
+    height: 25px;
+    width: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    border: 3px solid #ef565f;
+    box-sizing: border-box;
+    right: 10px;
+    position: relative;
+}
+
+@keyframes indicator{
+    30%{
+        opacity: 0;
+    }
+
+    0%{
+        opacity: 1;
+    }
+
+    100%{
+        opacity: 1;
+        border: 3px solid #60d480;
+        left: -68%
+    }
+}
+
+/* ------------------------------------ */
+
+
+
+
+.toggle-button{
+    margin-top: 50px;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    box-shadow: 3px 3px 10px rgba(0,0,0,1),
+  -1px -1px 6px rgba(255, 255, 255, 0.4);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  cursor: pointer;
+  background-color: #212121;
+  transition: all .1s ease;
+}
+
+.toggle-button::before{
+    content: "";
+    width: 85%;
+    height: 85%;
+    border-radius: 100%;
+    background-color: transparent;
+    position: absolute;
+    transition: all .2s ease;
+}
+
+.toggle-button.toggle-shadow::before{
+    box-shadow:
+    inset 3px 3px 10px rgba(0,0,0,1),
+    inset -1px -1px 6px rgba(255, 255, 255, 0.4);
+}
+
+  .toggle-button-checkbox{
+    width: 50%;
+    height: 50%;
+    border-radius: 100%;
+    background-color: transparent;
+    border: 3px solid #ef565f;
+    cursor: pointer;
+    z-index: 50;
+  }
+
+  .toggle-button-extra{
+    width: 25px;
+    height: 15px;
+    background-color: #212121;
+    position: relative;
+    margin: auto;
+    bottom: 22px;
+  }
+
+  .toggle-button-extra::before{
+    content: "";
+    width: 3px;
+    height: 18px;
+    border-radius: 20px;
+    background-color: #ef565f;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .toggle-button-extra.edited::before{
+    background-color:  #60d480;
+  }
+
+  .toggle-border{
+    border: 3px solid #60d480;
+  }
