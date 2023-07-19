@@ -21,3 +21,7 @@ $("#cards").on("click", () => {
 $("#gel").on("click", () => {
     window.location.assign("./gel-inputs/gel.html")
 })
+
+$("#phone").on("click", () => {
+    window.location.assign("./smart-phone/phone.html")
+})
