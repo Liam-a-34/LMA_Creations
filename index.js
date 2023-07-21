@@ -25,3 +25,7 @@ $("#gel").on("click", () => {
 $("#phone").on("click", () => {
     window.location.assign("./smart-phone/phone.html")
 })
+
+$("#spiral").on("click", () => {
+    window.location.assign("./spiral-loader/spiral.html")
+})
