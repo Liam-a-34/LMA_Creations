@@ -6,3 +6,5 @@ A collection of useful code features, and ideas
 ## Screenshot
 
 ## Contact
+
+## License
