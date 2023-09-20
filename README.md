@@ -9,4 +9,4 @@ A collection of useful code features, and ideas
 
 ## License
 
-See
+See LICENSE 
